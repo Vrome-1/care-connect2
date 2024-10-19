@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 def chatbot():
         with st.chat_message("User"):
                 st.write("Hello ✋")

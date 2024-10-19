@@ -3,7 +3,12 @@ def chatbot():
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column:
-                message.write("Hello ✋")
+                response = random.choice (
+                        [
+                                "Hello!", "Hi There!", "Hi!",
+                        ]
+                )
+                message.write(response)
                 
          # Initialize chat history
         if "messages" not in st.session_state:

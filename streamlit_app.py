@@ -33,8 +33,20 @@ elif page == "Community Forum":
     forum()
 elif page == "Educational Resources":
     st.title("Resources")
-    st.write("If you or someone you know is a patient in need of a community...")
-    st.subheader("use this")
+    st.write("If you or someone you know is struggling as a patient pleas use these resources to help: ")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.header("Main Column 1")
+        subcol1, subcol2 = st.columns(2)
+    with subcol1:
+        st.write("Subcolumn 1")
+    with subcol2:
+        st.write("Subcolumn 2")
+    with col2:
+        st.header("Main Column 2")
+        st.write("This is the second main column.")
+        st.subheader("use this")
+        
 elif page == "Chatbot":
     chatbot()
 

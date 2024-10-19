@@ -12,7 +12,7 @@ def buddy():
   if submit_clicked:
     if name and selected_value:
       st.write("Here are some people you can connect with: ")
-      for key,value in Buddies:
+      for key, value in Buddies:
         if (key == submit_clicked): 
           st.write("Here are some people you can connect with: ")
           st.markdown(

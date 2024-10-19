@@ -1,8 +1,8 @@
 import streamlit as st
 def chatbot():
         message = st.chat_message("User")
-        left_col, right_col = st.columns([3,1])
-        with left_col:
+        left_column, right_column = st.columns([3,1])
+        with left_column:
                 message.write("Hello ✋")
                 
          # Initialize chat history
@@ -11,16 +11,12 @@ def chatbot():
 
         if prompt := st.chat_input("Message your AI mentor!"):
                     # Display user message in chat message container
-                with left_col:
-                        message = st.chat_message("User")
-                        message.write("What's your name?")
                 st.session_state.messages.append({"role": "user","content": prompt})
                   
          # Display chat messages from history on app rerun
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
-                        with right_col:
-                                st.markdown(message["content"])
+                        st.markdown(message["content"])
         
 
         # # Show title and description.

@@ -44,6 +44,7 @@ def forum():
                 'title': title,
                 'content': content,
             })
+            st.experimental_rerun() 
             st.success("Your story has been added!")  # Confirm submission
         else:
             st.error("Please fill in all fields.")

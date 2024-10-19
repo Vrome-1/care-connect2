@@ -10,6 +10,12 @@ if page == "Mission":
     st.subheader("Our Motivation");
     st.write("We understand that, in healthcare, mental health is key. Patients go through a lot of stress related to their illnesses - both physical and emotional.");
 
+if page == "Community Forum":
+    st.title('Our Care Community Forum :heart:');
+    st.subheader("Today's Posts");
+    st.write("Preeti Patel");
+    st.write("My story");
+
 # # Show title and description.
 # st.title("💬 Chatbot")
 # st.write(

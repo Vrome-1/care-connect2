@@ -3,14 +3,14 @@ from openai import OpenAI
 
 st.title("ConnectCare")
 st.sidebar.title("Navigation")
-col1, col2, col3, col4 = st.sidebar.columns(4)
-with col1:
+row1, row2, row3, row4 = st.sidebar.rows(4)
+with row1:
     st.button("About")
-with col2:
+with row2:
     st.button("Educational Resources")
-with col3:
+with row3:
     st.button("Community Forum")
-with col4:
+with row4:
     st.button("Mentor Matching")
 page = st.sidebar.selectbox("Choose a page", ["Mission", "Educational Resources", "Community Forum", "Mentor Matching"])
 

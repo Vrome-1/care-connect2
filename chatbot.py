@@ -9,9 +9,9 @@ def chatbot():
                     
         if prompt := st.chat_input("Message your AI mentor!"):
             # Display user message in chat message container
+            st.session_state.messages.append({"role": "user","content": prompt})
             with st.chat_message("user"):
                 st.write("What's your name?")
-            st.session_state.messages.append({"role": "user","content": prompt})
 
         # Display chat messages from history on app rerun
         for message in st.session_state.messages:

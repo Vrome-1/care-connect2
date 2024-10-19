@@ -28,11 +28,6 @@ def chatbot():
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
-                time.sleep(1)
-                message = st.chat_message("user")
-                message.write("What's your name?")
-                count++
-        
 
         # # Show title and description.
         # st.title("💬 Chatbot")

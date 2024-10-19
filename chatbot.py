@@ -13,8 +13,8 @@ def chatbot():
             for message in st.session_state.messages:
                     with st.chat_message(message["role"]):
                             st.markdown(message["content"])
-            message = st.chat_message("User")
-            message.write("What's your name?")
+        message = st.chat_message("User")
+        message.write("What's your name?")
          # Display chat messages from history on app rerun
 
         

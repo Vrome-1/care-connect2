@@ -12,7 +12,7 @@ def chatbot():
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
 
-         if prompt := st.chat_input("Message your AI mentor!"):
+        if prompt := st.chat_input("Message your AI mentor!"):
             # Display user message in chat message container
             with st.chat_message("user"):
                 st.write("What's your name?")

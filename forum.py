@@ -13,7 +13,7 @@ def forum():
     title = st.text_input("Title of Your Story")
     content = st.text_area("Write your story here...")    
     if st.button("Submit"):
-            if name and title and content and profile_pic_url:
+        if name and title and content and profile_pic_url:
             # Add the new story to the user_stories list
             # user_stories.append({
             #     'name': name,
@@ -22,6 +22,6 @@ def forum():
             #     'profile_pic': profile_pic_url
             # })
             st.success("Your story has been added!")
-            else:
+        else:
             st.error("Please fill in all fields.")
    

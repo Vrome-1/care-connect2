@@ -5,10 +5,10 @@ secondaryBackgroundColor = "#545775"
 textColor = "#34252f"
 font = "serif"
 
-[general]
+[theme]
 pageTitle = "Care Connect"
 pageIcon = "🤝"
 
-[server]
+[theme]
 layout = "center"
 initialSidebarState = "auto"

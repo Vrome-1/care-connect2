@@ -4,6 +4,11 @@ import time
 import openai
 import os
 def chatbot():
+        openai_api_key = st.text_input("OpenAI API Key", type="password")
+        if not openai_api_key:
+             st.info("Please add your OpenAI API key to continue.", icon="🗝️")
+        else:
+             client = OpenAI(api_key=openai_api_key)
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column:

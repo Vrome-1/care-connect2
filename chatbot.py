@@ -18,22 +18,40 @@ def chatbot():
         if "messages" not in st.session_state:
             st.session_state.messages = []
 
-        if prompt := st.chat_input("Message your AI mentor!"):
-                    # Display user message in chat message container
-                st.session_state.messages.append({"role": "user","content": prompt})
-         # Display chat messages from history on app rerun
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
+                        
+        if prompt := st.chat_input("Message your AI mentor!"):
+                # Display user message in chat message container
+                st.session_state.messages.append({"role": "user","content": prompt})
+                # Display chat messages from history on app rerun
+                # Display user message
+                with st.chat_message("user"):
+                    st.markdown(prompt)
+        
+                try:
+                    # Call the OpenAI API to generate a response
+                    completion = openai.ChatCompletion.create(
+                        model="gpt-3.5-turbo",
+                        messages=[
+                            {"role": "system", "content": "You are a helpful assistant"},
+                            {"role": "user", "content": prompt}
+                        ]
+                    )
+        
+                    # Extract AI's response
+                    ai_response = completion.choices[0].message['content']
+        
+                    # Display AI response and add it to the session state
+                    with st.chat_message("assistant"):
+                        st.markdown(ai_response)
+        
+                    st.session_state.messages.append({"role": "assistant", "content": ai_response})
+                except Exception as e:
+                    st.error(f"Error: {e}")
 
-        completion = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                        {"role": "system", "content": "You are a helpful assistant"},
-                        {"role": "user", "content":prompt}
-                ]
-        )
-
+               
         
        
         # # Show title and description.

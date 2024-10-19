@@ -17,11 +17,11 @@ def buddy():
           buddies_list = Buddies[submit_clicked]
           st.write("Here are some people you can connect with: ")
           st.markdown(
-              ""
+              f"""
               <div style="background-color: #333; padding: 20px; border-radius: 5px; border: 1px solid #ccc;">
               <h3 style="color: #333;">buddies_list</h3>
               <p style="color: #666;">Connect!</p>
               </div>
-              "",
+              """,
             unsafe_allow_html=True
           )

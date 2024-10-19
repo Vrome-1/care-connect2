@@ -22,8 +22,8 @@ def forum():
             """,
             unsafe_allow_html=True
         )
-       if st.button("Submit"):
-        if name and title and content and profile_pic_url:
+        if st.button("Submit"):
+            if name and title and content and profile_pic_url:
             # Add the new story to the user_stories list
             user_stories.append({
                 'name': name,
@@ -32,7 +32,7 @@ def forum():
                 'profile_pic': profile_pic_url
             })
             st.success("Your story has been added!")
-        else:
+            else:
             st.error("Please fill in all fields.")
     st.subheader("Share Your Story")
     name = st.text_input("Your Name")

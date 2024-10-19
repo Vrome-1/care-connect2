@@ -13,31 +13,30 @@ def forum():
     name = st.text_input("Your Name")
     title = st.text_input("Title of Your Story")
     content = st.text_area("Write your story here...")    
-    if st.button("Submit"):
-        if name and title and content:
-            # Add the new story to the user_stories list
-            user_stories.append({
-                'name': name,
-                'title': title,
-                'content': content,
-                
-            })
-            st.success("Your story has been added!")
-        else:
-            st.error("Please fill in all fields.")
+if st.button("Submit"):
+    if name and title and content:
+        # Add the new story to the user_stories list
+        user_stories.append({
+            'name': name,
+            'title': title,
+            'content': content,
+        })
+        st.success("Your story has been added!")
+    else:
+        st.error("Please fill in all fields.")
 
-   # for story in user_stories:
-   #      st.markdown(
-   #          f"""
-   #          <div style="display: flex; align-items: center;">
-   #              # <img src="{story['profile_pic']}" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">
-   #              <div>
-   #                  <strong>{story['name']}</strong><br>
-   #                  {story['title']}<br>
-   #                  {story['content']}
-   #              </div>
-   #          </div>
-   #          """,
-   #          unsafe_allow_html=True
-   #      )
+# Correct indentation for the for loop
+for story in user_stories:  
+    st.markdown(
+        f"""
+        <div style="display: flex; align-items: center;">
+            <div>
+                <strong>{story['name']}</strong><br>
+                {story['title']}<br>
+                {story['content']}
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
    

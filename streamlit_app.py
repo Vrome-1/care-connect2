@@ -3,7 +3,7 @@ from openai import OpenAI
 from forum import forum
 from chatbot import chatbot
 st.set_page_config(
-    page_title="Connect Care",
+    page_title="Connect Care\n",
     page_icon="🤝",
     layout="wide",
     initial_sidebar_state = "auto",

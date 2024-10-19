@@ -35,8 +35,9 @@ def forum():
     title = st.text_input("Title of Your Story")
     content = st.text_area("Write your story here...")
     
-    # Button to submit the story
-    if st.button("Submit"):
+   submit_clicked = st.button("Submit")
+    
+    if submit_clicked:
         if name and title and content:
             # Add the new story to the user_stories list in session state
             st.session_state.user_stories.append({
@@ -44,8 +45,8 @@ def forum():
                 'title': title,
                 'content': content,
             })
-            st.experimental_rerun() 
-            st.success("Your story has been added!")  # Confirm submission
+            # Reset the input fields
+            st.experimental_rerun()  # Rerun to update the display
         else:
             st.error("Please fill in all fields.")
 

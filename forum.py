@@ -45,7 +45,7 @@ def forum():
             })
             st.success("Your story has been added!")  # Confirm submission
             # Reset the input fields
-            st.experimental_rerun()  # Rerun to update the display
+              # Rerun to update the display
         else:
             st.error("Please fill in all fields.")
 

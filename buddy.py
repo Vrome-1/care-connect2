@@ -20,8 +20,8 @@ def buddy():
                 f"""
                 <div style="background-color: #f0f2f5; padding: 20px; border-radius: 5px; border: 1px solid #ccc;">
                 <h3 style="color: #000;">{person}</h3>
-                <p style="color: #000;">Connect!</p>
                 </div>
                 """,
                 unsafe_allow_html=True
+                connect = st.connect("Connect!")
           )

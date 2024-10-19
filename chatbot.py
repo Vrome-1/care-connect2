@@ -2,10 +2,6 @@ import streamlit as st
 def chatbot():
         with st.chat_message("User"):
                 st.write("Hello ✋")
-        prompt = st.chat_input("What is your name?")
-        if prompt:
-                st.write(f"No, you're a dog for life")
-
         # Initialize chat history
         if "messages" not in st.session_state:
             st.session_state.messages = []

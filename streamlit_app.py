@@ -14,9 +14,7 @@ if page == "Mission":
 elif page == "Community Forum":
     st.title('Our Care Community Forum :heart:');
     st.subheader("Today's Posts");
-    st.success("Preeti Patel\nMystory\n Hi guys, I'm a new Care Connect user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer. I'm fortunate enough to have
-    a very loving family, but even still I feel alone day after day. I feel guilty for not being able to be as strong of a mom as I used to be. I feel scared of the future, if I even have one. My days are filled with thoughts that get progressively darker, but I feel
-    like I have to put a smile on my face for my family. I'm looking for people who feel the same way. Does it ever get better?");
+    st.success("Preeti Patel\nMystory\n Hi guys, I'm a new Care Connect user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer. I'm fortunate enough to have a very loving family, but even still I feel alone day after day. I feel guilty for not being able to be as strong of a mom as I used to be. I feel scared of the future, if I even have one. My days are filled with thoughts that get progressively darker, but I feel like I have to put a smile on my face for my family. I'm looking for people who feel the same way. Does it ever get better?");
 
 elif page == "Educational Resources":
     st.subheader("use this")

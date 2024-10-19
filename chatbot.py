@@ -4,7 +4,7 @@ import time
 def chatbot():
         questions = {
                 1:"What's you name?",
-                2:"How are you feeling today?"
+                2:"How are you feeling today?",
                 3:"Is there anything I can do to help you?"
         }
         message = st.chat_message("User")

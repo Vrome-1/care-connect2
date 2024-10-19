@@ -15,12 +15,7 @@ def chatbot():
             # Display user message in chat message container
             with st.chat_message("user"):
                 st.write(prompt)
-        if prompt := st.chat_input("Are you willing to take a quiz to figure out how you are feeling today?"):
-            # Display user message in chat message container
-            with st.chat_message("user"):
-                st.write(prompt)
-            # Add user message to chat history
-           # st.session_state.messages.append({"role": "user", "content": prompt})
+            st.session_state.messages.append({"role": "user","content": prompt})
         
         
 

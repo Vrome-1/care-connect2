@@ -22,6 +22,6 @@ def buddy():
                 <h3 style="color: #000;">{person}</h3>
                 </div>
                 """,
-                unsafe_allow_html=True
                 connect = st.connect("Connect!")
+                unsafe_allow_html=True
           )

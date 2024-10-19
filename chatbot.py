@@ -4,11 +4,7 @@ import time
 import openai
 import os
 def chatbot():
-        openai.api_key = st.text_input("OpenAI API Key", type="password")
-        if not openai.api_key:
-             st.info("Please add your OpenAI API key to continue.", icon="🗝️")
-        else:
-             client = OpenAI(api_key=openai_api_key)
+        openai.api_key = os.getenv("sk-ui5FCUjjTHQcMLwed-oov3hx-PbqsgQJ1X5HOCgf2ST3BlbkFJvN5KFsMLdydZwf60hQdTR61qc-xTxdB-0oVojAjyQA")
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column:
@@ -29,18 +25,17 @@ def chatbot():
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
-        stream = client.chat.completions.create(
+
+        completion = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                        {"role": m["role"], "content": m["content"]}
-                        for m in st.session_state.messages
-                ],
-                stream=True,
+                        {"role": "system", "content": "You are a helpful assistant"},
+                        {"role": "user", "content":prompt}
+                ]
         )
-        with st.chat_message("assistant"):
-                response = st.write_stream(stream)
-                st.session_state.messages.append({"role": "assistant", "content": response})
 
+        
+       
         # # Show title and description.
         # st.title("💬 Chatbot")
         # st.write(

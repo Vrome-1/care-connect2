@@ -3,7 +3,7 @@ import streamlit as st
 # Function to display the community forum
 def forum():
     # Initialize user stories in session state if not already done
-     
+     st.session_state.user_stories = []
     if 'user_stories' not in st.session_state:
         st.session_state.user_stories = []
 
@@ -26,7 +26,7 @@ def forum():
 
     # Display all user stories, including new submissions
     if st.session_state.user_stories:
-        st.subheader("User Stories")
+        
         for story in st.session_state.user_stories:
             st.success(f"{story['name']}  \n{story['title']}  \n{story['content']}")  # Display in the same format
 

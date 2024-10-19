@@ -12,7 +12,7 @@ st.set_page_config(
 st.markdown(
     """
     <div style='background-color: #f0f2f5; padding: 20px; border-radius: 10px; text-align: center;'>
-        <h1 style='margin: 0; color: #333;'>🚀 Welcome to My Streamlit App</h1>
+        <h1 style='margin: 0; color: #333;'>Connect Care 🤝</h1>
         <p style='color: #666;'>Your journey starts here!</p>
         <img src='https://your-image-url.com/logo.png' alt='Logo' width='100'/>
     </div>
@@ -93,6 +93,6 @@ elif page == "Mentor Matching":
 
 #         # Stream the response to the chat using `st.write_stream`, then store it in 
 #         # session state.
-        # with st.chat_message("assistant"):
-        #     response = st.write_stream(stream)
-        # st.session_state.messages.append({"role": "assistant", "content": response})
+#         with st.chat_message("assistant"):
+#             response = st.write_stream(stream)
+#         st.session_state.messages.append({"role": "assistant", "content": response})

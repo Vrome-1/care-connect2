@@ -3,7 +3,7 @@ import streamlit as st
 # Function to display the community forum
 def forum():
     # Initialize user stories in session state if not already done
-    st.session_state.user_stories = []
+    
     if 'user_stories' not in st.session_state:
         st.session_state.user_stories = []
 

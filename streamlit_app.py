@@ -41,6 +41,7 @@ elif page == "Community Forum":
 elif page == "Educational Resources":
     st.subheader("use this")
 elif page == "Mentor Matching":
+    chatbot()
     st.subheader("info")
 
 # # Show title and description.

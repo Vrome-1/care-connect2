@@ -3,7 +3,7 @@ from openai import OpenAI
 from forum import forum
 from chatbot import chatbot
 st.set_page_config(
-    page_title="Connect Care\n",
+    page_title="Connect Care",
     page_icon="🤝",
     layout="wide",
     initial_sidebar_state = "auto",
@@ -33,7 +33,6 @@ elif page == "Educational Resources":
     st.subheader("use this")
 elif page == "Mentor Matching":
     chatbot()
-    st.subheader("info")
 
 # # Show title and description.
 # st.title("💬 Chatbot")

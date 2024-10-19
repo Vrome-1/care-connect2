@@ -28,9 +28,9 @@ def chatbot():
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
-                message = st.chat_message("user")
                 time.sleep(1)
-                message.write(questions[count])
+                message = st.chat_message("user")
+                message.write("Whats your name?")
                 count++
         
 

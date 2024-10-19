@@ -12,7 +12,7 @@ def forum():
         st.markdown(
             f"""
             <div style="display: flex; align-items: center;">
-                <img src="{story['profile_pic']}" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">
+                # <img src="{story['profile_pic']}" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">
                 <div>
                     <strong>{story['name']}</strong><br>
                     {story['title']}<br>

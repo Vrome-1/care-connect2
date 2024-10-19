@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 def chatbot():
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])

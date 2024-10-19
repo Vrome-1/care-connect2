@@ -24,7 +24,6 @@ def chatbot():
                     # Display user message in chat message container
                 st.session_state.messages.append({"role": "user","content": prompt})
          # Display chat messages from history on app rerun
-        int count=0
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])

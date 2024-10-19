@@ -7,7 +7,7 @@ def chatbot():
                 2:"How are you feeling today?",
                 3:"Is there anything I can do to help you?"
         }'''
-        message = st.chat_message("User")
+        '''message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column:
                 response = random.choice (
@@ -27,7 +27,7 @@ def chatbot():
         int count=0
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
-                        st.markdown(message["content"])
+                        st.markdown(message["content"])'''
 
         # # Show title and description.
         # st.title("💬 Chatbot")

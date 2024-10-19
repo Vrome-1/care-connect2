@@ -3,7 +3,7 @@ from openai import OpenAI
 
 st.title("ConnectCare")
 st.sidebar.title("Navigation")
-row1, row2, row3, row4 = st.sidebar.rows(4)
+row1, row2, row3, row4 = st.sidebar.row(4)
 with row1:
     st.button("About")
 with row2:

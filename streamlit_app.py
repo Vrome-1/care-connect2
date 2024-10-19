@@ -33,19 +33,21 @@ elif page == "Community Forum":
     forum()
 elif page == "Educational Resources":
     st.title("Resources")
-    st.write("If you or someone you know is struggling as a patient pleas use these resources to help: ")
+    st.write("If you or someone you know is struggling as a patient please use these resources to help: ")
     col1, col2 = st.columns(2)
     with col1:
-        st.header("Main Column 1")
+        st.header("People")
         subcol1, subcol2 = st.columns(2)
     with subcol1:
         st.write("Subcolumn 1")
     with subcol2:
         st.write("Subcolumn 2")
     with col2:
-        st.header("Main Column 2")
-        st.write("This is the second main column.")
-        st.subheader("use this")
+        st.header("Websites")
+        st.markdown("- https://www.ncoa.org/adviser/medical-alert-systems/support-for-older-adults-living-alone/")
+        st.markdown("- https://www.cdc.gov/mental-health/about/?CDC_AAref_Val=https://www.cdc.gov/mentalhealth/learn/index.htm")
+        st.markdown("- https://www.patientadvocate.org/")
+        st.markdown("- themighty.com")
         
 elif page == "Chatbot":
     chatbot()

@@ -11,12 +11,22 @@ st.set_page_config(
 
 st.markdown(
     """
-    <div style='background-color: #f0f2f5; padding: 10px; border-radius: 5px;'>
-        <h2 style='margin: 0;'>Connect Care</h2>
+    <div style='background-color: #f0f2f5; padding: 20px; border-radius: 10px; text-align: center;'>
+        <h1 style='margin: 0; color: #333;'>🚀 Welcome to My Streamlit App</h1>
+        <p style='color: #666;'>Your journey starts here!</p>
+        <img src='https://your-image-url.com/logo.png' alt='Logo' width='100'/>
     </div>
     """,
     unsafe_allow_html=True
 )
+# st.markdown(
+#     """
+#     <div style='background-color: #f0f2f5; padding: 10px; border-radius: 5px;'>
+#         <h2 style='margin: 0;'>Connect Care</h2>
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+# )
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Choose a page", ["Mission", "Educational Resources", "Community Forum", "Mentor Matching"])
 

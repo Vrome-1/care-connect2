@@ -3,6 +3,7 @@ import streamlit as st
 # Function to display the community forum
 def forum():
     # Initialize user stories in session state if not already done
+    st.session_state.user_stories = []
     if 'user_stories' not in st.session_state:
         st.session_state.user_stories = []
 
@@ -22,14 +23,7 @@ def forum():
         "Guess it's better than the other ones though because they affect my mood less. I'm really addicted to Words With Friends right now, "
         "effectively gets my mind off everything. Anyone want to play with me sometime?"
     )
-
-    st.subheader("Share Your Story")
-    name = st.text_input("Your Name")
-    title = st.text_input("Title of Your Story")
-    content = st.text_area("Write your story here...")
-    
-    # Button to submit the story
-    if st.button("Submit"):
+if st.button("Submit"):
         if name and title and content:
             # Add the new story to the user_stories list in session state
             st.session_state.user_stories.append({
@@ -40,6 +34,13 @@ def forum():
             st.success("Your story has been added!")
         else:
             st.error("Please fill in all fields.")
+    st.subheader("Share Your Story")
+    name = st.text_input("Your Name")
+    title = st.text_input("Title of Your Story")
+    content = st.text_area("Write your story here...")
+    
+    # Button to submit the story
+    
 
     # Display all user stories
     for story in st.session_state.user_stories:  # Use the session state variable

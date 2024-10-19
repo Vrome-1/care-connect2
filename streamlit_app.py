@@ -1,6 +1,13 @@
 import streamlit as st
 from openai import OpenAI
 from forum import forum
+
+st.set_page_config(
+    page_title="Your App Title",
+    page_icon="😊",  # Use any emoji here
+    layout="wide"
+)
+
 st.markdown(
     """
     <div style='background-color: #f0f2f5; padding: 10px; border-radius: 5px;'>

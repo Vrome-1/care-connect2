@@ -1,7 +1,12 @@
 import streamlit as st
 from openai import OpenAI
 from forum import forum
-st.title("ConnectCare")
+st.header("Connect Care", divider="gray")
+st.header("These headers have rotating dividers", divider=True)
+st.header("One", divider=True)
+st.header("Two", divider=True)
+st.header("Three", divider=True)
+st.header("Four", divider=True)
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Choose a page", ["Mission", "Educational Resources", "Community Forum", "Mentor Matching"])
 

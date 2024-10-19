@@ -1,7 +1,7 @@
 import streamlit as st
 def chatbot():
         with st.chat_message("user"):
-                st.write("Hello ✋")
+                st.markdown("Hello ✋")
         
 
 # # Show title and description.

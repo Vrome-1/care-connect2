@@ -33,7 +33,7 @@ def forum():
                 'name': name,
                 'title': title,
                 'content': content,
-                'profile_pic': profile_pic_url
+                
             })
             st.success("Your story has been added!")
         else:

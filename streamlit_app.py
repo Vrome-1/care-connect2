@@ -19,7 +19,7 @@ st.markdown(
 )
 
 st.sidebar.title("Navigation")
-st.sidebar.markdown("_____")
+st.sidebar.("_____")
 page = st.sidebar.radio("Choose a page", ["Mission", "Educational Resources", "Community Forum", "Mentor Matching"])
 
 if page == "Mission":

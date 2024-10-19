@@ -2,9 +2,7 @@ import streamlit as st
 def chatbot():
         with st.chat_message("User"):
                 st.write("Hello ✋")
-        prompt = st.chat_input("How are you feeling today?")
-        if prompt:
-                st.write(f"User has sent the following prompt: {prompt}"
+      
         
         
 

@@ -1,8 +1,11 @@
 import streamlit as st
 import numpy as np
 def chatbot():
-        st.chat_message("user"):
-        st.write("Hello ✋")
+        with st.chat_message("User"):
+                st.write("Hello ✋")
+        prompt = st.chat_input("How are you feeling today?")
+        if prompt:
+                st.write(f"User has sent the following prompt: {prompt}"
         
 
 # # Show title and description.

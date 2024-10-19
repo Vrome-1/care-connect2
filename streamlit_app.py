@@ -6,6 +6,11 @@ st.set_page_config(
     page_title="Connect Care",
     page_icon="🤝",
     layout="wide"
+    initial_sidebar_state = "auto"
+     menu_items={
+        'Get Help': 'https://docs.streamlit.io',
+        'About': 'This app is built with Streamlit!'
+    }
 )
 
 st.markdown(

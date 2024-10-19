@@ -11,10 +11,12 @@ def chatbot():
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
 
-        if prompt := st.chat_input("What is your name?"):
-                with st.chat_message("user"):
-                        st.markdown(prompt)
-                st.session_state.messages.append({"role":"user":"content":prompt})
+        if prompt := st.chat_input("What is up?"):
+            # Display user message in chat message container
+            with st.chat_message("user"):
+                st.markdown(prompt)
+            # Add user message to chat history
+            st.session_state.messages.append({"role": "user", "content": prompt})
         
         
 

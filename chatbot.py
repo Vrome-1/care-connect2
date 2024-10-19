@@ -9,18 +9,18 @@ def chatbot():
         if "messages" not in st.session_state:
             st.session_state.messages = []
 
-        with right_col:
-                if prompt := st.chat_input("Message your AI mentor!"):
+        if prompt := st.chat_input("Message your AI mentor!"):
                     # Display user message in chat message container
-                    with left_col:
-                            message = st.chat_message("User")
-                            message.write("What's your name?")
+                with left_col:
+                        message = st.chat_message("User")
+                        message.write("What's your name?")
                 st.session_state.messages.append({"role": "user","content": prompt})
                   
          # Display chat messages from history on app rerun
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
-                        st.markdown(message["content"])
+                        with right_col:
+                                st.markdown(message["content"])
         
 
         # # Show title and description.

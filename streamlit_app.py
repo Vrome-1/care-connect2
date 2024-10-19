@@ -1,6 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 
+st.title("ConnectCare")
 st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Choose a page", ["Mission", "Educational Resources", "Community Forum", "Mentor Matching"])
 
@@ -10,11 +11,16 @@ if page == "Mission":
     st.subheader("Our Motivation");
     st.write("We understand that, in healthcare, mental health is key. Patients go through a lot of stress related to their illnesses - both physical and emotional.");
 
-if page == "Community Forum":
+elif page == "Community Forum":
     st.title('Our Care Community Forum :heart:');
     st.subheader("Today's Posts");
     st.success("Preeti Patel");
     st.write("My story");
+
+elif page == "Educational Resources:
+    st.subheader("use this")
+elif page == "Mentor Matching"
+    st.subheader("info")
 
 # # Show title and description.
 # st.title("💬 Chatbot")

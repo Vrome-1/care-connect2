@@ -13,9 +13,8 @@ def buddy():
     if name and selected_value:
       st.write("Here are some people you can connect with: ")
       for key, value in Buddies.items():
-        if (key == submit_clicked): 
-          buddies_list = Buddies[submit_clicked]
-          st.write("Here are some people you can connect with: ")
+        if (key == selected_value): 
+          buddies_list = Buddies[selected_value]
           st.markdown(
               f"""
               <div style="background-color: #333; padding: 20px; border-radius: 5px; border: 1px solid #ccc;">

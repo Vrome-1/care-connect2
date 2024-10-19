@@ -36,8 +36,7 @@ def forum():
     content = st.text_area("Write your story here...")
     
    submit_clicked = st.button("Submit")
-    
-    if submit_clicked:
+   if submit_clicked:
         if name and title and content:
             # Add the new story to the user_stories list in session state
             st.session_state.user_stories.append({

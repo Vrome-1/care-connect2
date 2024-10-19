@@ -16,8 +16,7 @@ def buddy():
         if (key == submit_clicked): 
           st.write("Here are some people you can connect with: ")
           st.markdown(
-              """
-              <div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; border: 1px solid #ccc;">
+              <div style="background-color: #333; padding: 20px; border-radius: 5px; border: 1px solid #ccc;">
               <h3 style="color: #333;">{value}</h3>
               <p style="color: #666;">Connect!</p>
               </div>

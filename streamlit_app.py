@@ -19,7 +19,7 @@ st.markdown(
 )
 
 st.sidebar.title("Navigation\n____")
-page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Community Forum", "Mentor Matching"])
+page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Community Forum", "Chatbot"])
 
 if page == "About":
     st.title("About Connect Care");

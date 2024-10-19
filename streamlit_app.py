@@ -17,7 +17,7 @@ elif page == "Community Forum":
     st.success("Preeti Patel");
     st.write("My story");
 
-elif page == "Educational Resources:
+elif page == "Educational Resources":
     st.subheader("use this")
 elif page == "Mentor Matching"
     st.subheader("info")

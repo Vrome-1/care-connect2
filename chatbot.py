@@ -1,12 +1,9 @@
 import streamlit as st
 import random
 import time
+import openai
+import os
 def chatbot():
-        '''questions = {
-                1:"What's you name?",
-                2:"How are you feeling today?",
-                3:"Is there anything I can do to help you?"
-        }'''
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column:
@@ -27,6 +24,17 @@ def chatbot():
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
+        stream = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                        {"role": m["role"], "content": m["content"]}
+                        for m in st.session_state.messages
+                ],
+                stream=True,
+        )
+        with st.chat_message("assistant"):
+                response = st.write_stream(stream)
+                st.session_state.messages.append({"role": "assistant", "content": response})
 
         # # Show title and description.
         # st.title("💬 Chatbot")

@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 from forum import forum
-st.title("Connect Care")
+st.header("Connect Care")
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Choose a page", ["Mission", "Educational Resources", "Community Forum", "Mentor Matching"])
 

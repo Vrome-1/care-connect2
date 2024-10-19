@@ -13,7 +13,7 @@ if page == "Mission":
 if page == "Community Forum":
     st.title('Our Care Community Forum :heart:');
     st.subheader("Today's Posts");
-    st.write("Preeti Patel");
+    st.success("Preeti Patel");
     st.write("My story");
 
 # # Show title and description.

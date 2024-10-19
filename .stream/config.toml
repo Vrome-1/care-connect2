@@ -1,14 +1,6 @@
-[general]
-pageTitle = "Care Connect"
-pageIcon = "🤝"
-
-[server]
-layout = "center"
-initialSidebarState = "auto"
-
 [theme]
 primaryColor = "#c7efcf"
-backgroundColor = "#F0F0F0"
+backgroundColor = "#000000"
 secondaryBackgroundColor = "#008080"
 textColor = "#333333"
 font = "serif"

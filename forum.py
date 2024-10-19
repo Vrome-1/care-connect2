@@ -26,18 +26,18 @@ def forum():
         else:
             st.error("Please fill in all fields.")
 
-   for story in user_stories:
-        st.markdown(
-            f"""
-            <div style="display: flex; align-items: center;">
-                # <img src="{story['profile_pic']}" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">
-                <div>
-                    <strong>{story['name']}</strong><br>
-                    {story['title']}<br>
-                    {story['content']}
-                </div>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+   # for story in user_stories:
+   #      st.markdown(
+   #          f"""
+   #          <div style="display: flex; align-items: center;">
+   #              # <img src="{story['profile_pic']}" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">
+   #              <div>
+   #                  <strong>{story['name']}</strong><br>
+   #                  {story['title']}<br>
+   #                  {story['content']}
+   #              </div>
+   #          </div>
+   #          """,
+   #          unsafe_allow_html=True
+   #      )
    

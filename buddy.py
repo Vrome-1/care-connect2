@@ -24,5 +24,5 @@ def buddy():
                 """,
                 unsafe_allow_html=True
             )
-  people_options = st.selectbox('Select a person to connect with:', Buddies[selected_value)
+  people_options = st.selectbox('Select a person to connect with:', Buddies[selected_value])
   connect = st.connect("Connect!")

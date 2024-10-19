@@ -37,17 +37,15 @@ elif page == "Educational Resources":
     col1, col2 = st.columns(2)
     with col1:
         st.header("People")
-        subcol1, subcol2 = st.columns(2)
-    with subcol1:
-        st.write("Subcolumn 1")
-    with subcol2:
-        st.write("Subcolumn 2")
+        st.markdown("- local doctor")
+        st.markdown("- find a health buddy")
     with col2:
         st.header("Websites")
         st.markdown("- https://www.ncoa.org/adviser/medical-alert-systems/support-for-older-adults-living-alone/")
         st.markdown("- https://www.cdc.gov/mental-health/about/?CDC_AAref_Val=https://www.cdc.gov/mentalhealth/learn/index.htm")
         st.markdown("- https://www.patientadvocate.org/")
         st.markdown("- themighty.com")
+        st.markdown("")
         
 elif page == "Chatbot":
     chatbot()

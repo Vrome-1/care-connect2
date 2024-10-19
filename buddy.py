@@ -11,5 +11,15 @@ def buddy():
   submit_clicked = st.button("Submit")
   if submit_clicked:
     if name and selected_value:
+      st.write("Here are some people you can connect with: ")
       for key in Buddies:
         st.write("Here are some people you can connect with: " + key)
+        st.markdown(
+            """
+            <div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; border: 1px solid #ccc;">
+            <h3 style="color: #333;">key</h3>
+            <p style="color: #666;">Connect!</p>
+            </div>
+            """,
+          unsafe_allow_html=True
+        )

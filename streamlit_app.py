@@ -3,8 +3,8 @@ from openai import OpenAI
 from forum import forum
 
 st.set_page_config(
-    page_title="Your App Title",
-    page_icon="😊",  # Use any emoji here
+    page_title="Connect Care",
+    page_icon="🤝",
     layout="wide"
 )
 

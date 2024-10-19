@@ -2,11 +2,11 @@ import streamlit as st
 import random
 import time
 def chatbot():
-        questions = {
+        '''questions = {
                 1:"What's you name?",
                 2:"How are you feeling today?",
                 3:"Is there anything I can do to help you?"
-        }
+        }'''
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column:
@@ -30,7 +30,7 @@ def chatbot():
                         st.markdown(message["content"])
                 time.sleep(1)
                 message = st.chat_message("user")
-                message.write("Whats your name?")
+                message.write("What's your name?")
                 count++
         
 

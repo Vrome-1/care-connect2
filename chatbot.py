@@ -24,8 +24,6 @@ def chatbot():
                         
         if prompt := st.chat_input("Message your AI mentor!"):
                 # Display user message in chat message container
-                with st.chat_message("user"):
-                    st.markdown(prompt)
                 st.session_state.messages.append({"role": "user","content": prompt})
 
 

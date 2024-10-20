@@ -3,11 +3,8 @@ import random
 import time
 import os 
 import openai
-from openai import OpenAI
 def chatbot():
-        client = OpenAI (
-                api_key = os.environ.get("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")
-        )
+        openai.api_key = os.environ.get("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")
         '''client = OpenAI(
                 api_key = "sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"
         )'''
@@ -39,13 +36,12 @@ def chatbot():
         
                 try:
                     # Call the OpenAI API to generate a response
-                    completion = openai.chat.completions.create(
-                        model="gpt-4",
+                    completion = openai.ChatCompletion.create(
+                        model=st.session_state["openai_model"],
                         messages=[
                             {"role": "system", "content": "You are a helpful assistant"},
                             {"role": "user", "content": prompt}
-                        ],
-                        stream=True
+                        ]
                     )
         
                     # Extract AI's response

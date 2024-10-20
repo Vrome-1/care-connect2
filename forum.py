@@ -17,14 +17,14 @@ def forum():
     #     "I also feel guilty for not being able to be as strong of a mom as I used to be. Does it ever get better?"
     # )
     st.markdown("""
-    <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black;">
+    <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black; margin-bottom:20px;">
     <p style="font-size:24px; font-weight:bold; margin:0;">Preeti Patel</p>
     <p style="margin-top:5px;">
         Hi guys, I'm a new Care Connect user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer. I'm fortunate enough to have a very loving family, but even still I feel alone because they don't know what it's like to go through this. I also feel guilty for not being able to be as strong of a mom as I used to be. Does it ever get better?
     </p></div>""", unsafe_allow_html=True)
 
     st.markdown("""
-    <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black;">
+    <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black; margin-bottom:20px;">
     <p style="font-size:24px; font-weight:bold; margin:0;">Elaine G</p>
     <p style="margin-top:5px;">
         Good day all. As usual, my daily update. My doctor changed my meds, and now I feel nauseous all the time. "

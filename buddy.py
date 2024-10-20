@@ -46,10 +46,10 @@ def buddy():
                 unsafe_allow_html=True
             )
       
-  people_options = st.selectbox('Select a person to connect with:', st.session_state.buddies_list)
-  if 'selected_person' not in st.session_state:
-      st.session_state.selected_person = None
-  st.session_state.selected_person = people_options  # Update session state with the currently selected person
-  connect = st.button("Connect!")
-  if connect and st.session_state.selected_person:
-      st.write("We sent an email requesting your connection. You will be connected with your buddy soon!")
+    people_options = st.selectbox('Select a person to connect with:', st.session_state.buddies_list)
+    if 'selected_person' not in st.session_state:
+        st.session_state.selected_person = None
+    st.session_state.selected_person = people_options  # Update session state with the currently selected person
+    connect = st.button("Connect!")
+    if connect and st.session_state.selected_person:
+        st.write("We sent an email requesting your connection. You will be connected with your buddy soon!")

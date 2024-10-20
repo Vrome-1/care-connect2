@@ -4,7 +4,56 @@ import time
 import os 
 import openai
 def chatbot():
-        '''openai.api_key = st.secrets["sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"]
+
+# Set your OpenAI API key from environment variable
+openai.api_key = os.getenv("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")
+
+def chatbot():
+    # Initialize chat history in session state
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+        st.session_state["openai_model"] = "gpt-3.5-turbo"
+
+    # Display chat history
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    # Input prompt from user
+    if prompt := st.chat_input("Message your AI mentor!"):
+        # Append the user's message to session state
+        st.session_state.messages.append({"role": "user", "content": prompt})
+
+        # Display user message in the chat window
+        with st.chat_message("user"):
+            st.write(prompt)
+
+        try:
+            # Call the OpenAI API to generate a response
+            completion = openai.ChatCompletion.create(
+                model=st.session_state["openai_model"],
+                messages=st.session_state.messages
+            )
+
+            # Extract AI's response
+            ai_response = completion.choices[0].message['content']
+
+            # Display AI response in the chat window
+            with st.chat_message("assistant"):
+                st.markdown(ai_response)
+
+            # Append AI response to session state
+            st.session_state.messages.append({"role": "assistant", "content": ai_response})
+
+        except openai.error.OpenAIError as e:
+            st.error(f"OpenAI API error: {e}")
+        except Exception as e:
+            st.error(f"An unexpected error occurred: {e}")
+
+               
+        
+
+'''openai.api_key = st.secrets["sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"]
         #openai.api_key = os.environ.get("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")
         '''client = OpenAI(
                 api_key = "sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"
@@ -60,60 +109,6 @@ def chatbot():
                     st.session_state.messages.append({"role": "assistant", "content": ai_response})
                 except Exception as e:
                     st.error(f"Error: {e}")'''
-
-        import os
-import openai
-import streamlit as st
-import random
-
-# Set your OpenAI API key from environment variable
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
-def chatbot():
-    # Initialize chat history in session state
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-        st.session_state["openai_model"] = "gpt-3.5-turbo"
-
-    # Display chat history
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-
-    # Input prompt from user
-    if prompt := st.chat_input("Message your AI mentor!"):
-        # Append the user's message to session state
-        st.session_state.messages.append({"role": "user", "content": prompt})
-
-        # Display user message in the chat window
-        with st.chat_message("user"):
-            st.write(prompt)
-
-        try:
-            # Call the OpenAI API to generate a response
-            completion = openai.ChatCompletion.create(
-                model=st.session_state["openai_model"],
-                messages=st.session_state.messages
-            )
-
-            # Extract AI's response
-            ai_response = completion.choices[0].message['content']
-
-            # Display AI response in the chat window
-            with st.chat_message("assistant"):
-                st.markdown(ai_response)
-
-            # Append AI response to session state
-            st.session_state.messages.append({"role": "assistant", "content": ai_response})
-
-        except openai.error.OpenAIError as e:
-            st.error(f"OpenAI API error: {e}")
-        except Exception as e:
-            st.error(f"An unexpected error occurred: {e}")
-
-               
-        
-       
         # # Show title and description.
         # st.title("💬 Chatbot")
         # st.write(

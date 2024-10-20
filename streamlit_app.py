@@ -23,7 +23,7 @@ st.markdown(
     <style>
     /* Increase the font size of sidebar items */
     .sidebar .sidebar-content {
-        font-size: 35px;  /* Change this value for desired font size */
+        font-size: 80px;  /* Change this value for desired font size */
     }
     </style>
     """,

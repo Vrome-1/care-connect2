@@ -13,6 +13,7 @@ become_buddy() :
   email = st.text_input("Your Email:")
   health = st.text_input("Your Health Concern:")
   story = st.text_input("Your Story (please include your age and your journey with your health concern, share as much as you are comfortable with):")
+  note = st.text_input("Please tell us if you have any special notes we need to keep in mind:")
   submit = st.button("Submit")
   if submit:
     st.write("Thank you for submitting your application to me a health buddy! We will review it soon and let you know the next steps in the process!")

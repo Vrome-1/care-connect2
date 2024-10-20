@@ -15,12 +15,7 @@ def buddy():
   st.write("Please input your name and health concern you would like to connect with a buddy over.")
   st.session_state.name = st.text_input("Your Name", value=st.session_state.name)
   health_options = ['Cancer', 'Depression', 'Diabetes', 'Eating Disorder']
-  # st.session_state.selected_value = st.selectbox('Select a health concern:', health_options)
-  st.session_state.selected_value = st.selectbox(
-        'Select a health concern:', 
-        health_options, 
-        index=health_options.index(st.session_state.selected_value) if st.session_state.selected_value else 0
-  )
+  st.session_state.selected_value = st.selectbox('Select a health concern:', health_options)
   submit_clicked = st.button("Submit")
   if submit_clicked:
     if st.session_state.name and st.session_state.selected_value:

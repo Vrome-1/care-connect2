@@ -1,5 +1,5 @@
 import streamlit as st
-
+st.set_page_config(page_title="Care Connect", page_icon="❤️")
 # Function to display the community forum
 def forum():
     # Initialize user stories in session state if not already done

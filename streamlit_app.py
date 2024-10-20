@@ -73,7 +73,7 @@ elif page == "Educational Resources":
         st.markdown("- Attend a local support group")
         
         # Check if the user clicked on "Find a health buddy"
-        if st.session_state.get("go_to_buddy"):
+        if st.get("go_to_buddy"):
             buddy()
     with col2:
         st.header("Websites")

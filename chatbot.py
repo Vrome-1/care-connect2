@@ -17,14 +17,15 @@ def chatbot():
          # Initialize chat history
         if "messages" not in st.session_state:
             st.session_state.messages = []
+                
+        if prompt := st.chat_input("Message your AI mentor!"):
+                # Display user message in chat message container
+                st.session_state.messages.append({"role": "user","content": prompt})
 
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
                         
-        if prompt := st.chat_input("Message your AI mentor!"):
-                # Display user message in chat message container
-                st.session_state.messages.append({"role": "user","content": prompt})
 
 
 '''st.title("AI Health Mentor")

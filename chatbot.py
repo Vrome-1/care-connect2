@@ -3,7 +3,6 @@ import random
 import time
 import os 
 import openai
-from openai.error import OpenAIError
 # Set your OpenAI API key from environment variable
 def chatbot():
     openai.api_key = "sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"
@@ -35,7 +34,7 @@ def chatbot():
 
             st.session_state.messages.append({"role": "assistant", "content": ai_response})
 
-        except OpenAIError as e:
+        except openai.error.OpenAIError as e:
             st.error(f"OpenAI API error: {e}")
         except Exception as e:
             st.error(f"An unexpected error occurred: {e}")

@@ -4,7 +4,7 @@ from forum import forum
 from chatbot import chatbot
 from buddy import buddy
 from become_buddy import become_buddy 
-export OPENAI_KEY_API = 'sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA'
+#export OPENAI_KEY_API = 'sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA'
 st.set_page_config(
     page_title="Connect Care",
     page_icon="🤝",

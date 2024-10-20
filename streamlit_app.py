@@ -69,7 +69,8 @@ elif page == "Educational Resources":
     with col1:
         st.header("People")
         st.markdown("- local doctor")
-        st.markdown("- find a health buddy")
+        url = "https://care-connect-success.streamlit.app/#find-a-health-buddy"
+        st.markdown(f"[- find a health budy]({url})")
         st.markdown("- attend a local support group")
     with col2:
         st.header("Websites")
@@ -77,7 +78,6 @@ elif page == "Educational Resources":
         st.markdown("- https://www.cdc.gov/mental-health/about/?CDC_AAref_Val=https://www.cdc.gov/mentalhealth/learn/index.htm")
         st.markdown("- https://www.patientadvocate.org/")
         st.markdown("- https://themighty.com")
-        st.markdown("")
         
 elif page == "Chatbot":
     chatbot()

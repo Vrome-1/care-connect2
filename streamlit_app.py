@@ -55,6 +55,9 @@ if page == "About":
     st.markdown("<p style='font-size:20px;'>This is a way for us to find people who are going through the same things as us. Here, patients can let all their feelings out and find others who can give them support and tips for managing their feelings. Users can post however frequently they want, and it can become a type of journal/blog for those who want to provide daily updates.</p>", unsafe_allow_html=True)
     st.subheader("2) The Chatbot");
     st.markdown("<p style='font-size:20px;'>This is for people who just need to get their feelings out. The Chatbot can provide comforting reassurance, and advice. This is a good alternative to the community forum if users are  shy or are hesitant to share their feelings publicly.</p>", unsafe_allow_html=True)
+    st.subheader("3) Finding a Health Buddy");
+    st.markdown("<p style='font-size:20px;'>Through our platform, you can find a health buddy who resonates with your journey.  A health buddy can be a valuable source of support, offering companionship, empathy, and understanding during tough times. Whether you’re dealing with a new diagnosis or managing a chronic condition, having someone to share your experiences with can make all the difference. Together, you can share tips, provide encouragement, and foster a sense of community.</p>", unsafe_allow_html=True)
+
 elif page == "Community Forum":
     forum()
 elif page == "Educational Resources":

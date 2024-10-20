@@ -28,6 +28,7 @@ def buddy():
   health_options = ['Cancer', 'Depression', 'Diabetes', 'Eating Disorder']
   st.session_state.selected_value = st.selectbox('Select a health concern:', health_options)
   submit_clicked = st.button("Submit")
+  st.session_state.buddies_list = Buddies['Cancer']
   if submit_clicked:
     if name and st.session_state.selected_value:
       st.write("Here are some people you can connect with: ")
@@ -45,7 +46,6 @@ def buddy():
                 """,
                 unsafe_allow_html=True
             )
-      
     people_options = st.selectbox('Select a person to connect with:', st.session_state.buddies_list)
     if 'selected_person' not in st.session_state:
         st.session_state.selected_person = None

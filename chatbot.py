@@ -2,6 +2,7 @@ import streamlit as st
 import openai
 import os
 import json
+import random
 
 def chatbot():
         st.title("💬 Chatbot")

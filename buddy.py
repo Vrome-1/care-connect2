@@ -5,17 +5,17 @@ def buddy():
   Buddies = {'Cancer': ['Alice', 'Ben', 'Jaspreet', 'Donald', 'June'] , 'Depression': ['Bernard', 'Andrew', 'Melaina', 'Carl'], 'Diabetes': ['Delian', 'Sally'], 'Eating Disorder': ['Dennis', 'Julia']}
   st.title("Find a Health Buddy")
   st.write("Please input your name and health concern you would like to connect with a buddy over.")
-  name = st.session_state.text_input("Your Name")
+  st.session_state.name = st.text_input("Your Name")
   health_options = ['Cancer', 'Depression', 'Diabetes', 'Eating Disorder']
-  selected_value = st.session_state.selectbox('Select a health concern:', health_options)
+  st.session_state.selected_value = st.selectbox('Select a health concern:', health_options)
   submit_clicked = st.button("Submit")
   if submit_clicked:
     if st.session_state.name and st.session_state.selected_value:
       st.write("Here are some people you can connect with: ")
       for key, value in Buddies.items():
         if (key == st.session_state.selected_value): 
-          buddies_list = Buddies[st.session_state.selected_value]
-          for person in buddies_list:
+          st.session_state.buddies_list = Buddies[st.session_state.selected_value]
+          for person in st.session_state.buddies_list:
             st.markdown(
                 f"""
                 <div style="background-color: #f0f2f5; padding: 20px; border-radius: 5px; border: 1px solid #ccc;">

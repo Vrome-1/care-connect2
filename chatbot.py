@@ -4,10 +4,10 @@ import time
 import openai
 import os
 def chatbot():
-        openai.api_key = os.secrets["OPENAI_API_KEY"]
+        openai.api_key = st.secrets["OPENAI_API_KEY"]
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
-        with left_column:
+        with left_column: 
                 response = random.choice (
                         [
                                 "Hello!", "Hi There!", "Hi!",
@@ -17,6 +17,7 @@ def chatbot():
          # Initialize chat history
         if "messages" not in st.session_state:
             st.session_state.messages = []
+            st.session_state["openai_model"] = "gpt-4"
 
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
@@ -33,11 +34,12 @@ def chatbot():
                 try:
                     # Call the OpenAI API to generate a response
                     completion = openai.chat.completions.create(
-                        model="gpt-4",
+                        model=st.session_state["openai_model"],
                         messages=[
                             {"role": "system", "content": "You are a helpful assistant"},
                             {"role": "user", "content": prompt}
-                        ]
+                        ],
+                        stream=True
                     )
         
                     # Extract AI's response

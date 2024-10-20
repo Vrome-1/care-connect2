@@ -22,9 +22,9 @@ def buddy():
         'Cancer': ['Alice', 'Ben', 'Jaspreet', 'Donald', 'June'],
         'Depression': ['Bernard', 'Andrew', 'Melaina', 'Carl'],
         'Diabetes': ['Delian', 'Sally', 'Payal'],
-        'Eating Disorder': ['Dennis', 'Julia', 'Luna', 'Joey']
-        'Substance Abuse':['Amina', 'Liam', 'Kai', 'Juan']
-        'HIV/AIDS': ['Fatima', 'Jamal', 'Sofia']
+        'Eating Disorder': ['Dennis', 'Julia', 'Luna', 'Joey'],
+        'Substance Abuse':['Amina', 'Liam', 'Kai', 'Juan'],
+        'HIV/AIDS': ['Fatima', 'Jamal', 'Sofia'],
         'Balding':['Kofi', 'Zara', 'Santiago']
   }
   

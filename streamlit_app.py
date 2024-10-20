@@ -18,7 +18,29 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+st.markdown(
+    """
+    <style>
+    /* Increase the font size of sidebar elements */
+    .css-1d391kg { /* Adjust this class if necessary */
+        font-size: 40px; /* Adjust the font size */
+    }
+    
+    /* Target all labels in the sidebar */
+    .stSidebar label {
+        font-size: 40px; /* Adjust the font size */
+    }
+    
+    /* Increase the font size of sidebar title and other texts */
+    .stSidebar h1, .stSidebar h2, .stSidebar h3, .stSidebar h4 {
+        font-size: 40px; /* Adjust the font size */
+    }
+    
+    /* Add more specific targeting as needed */
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.sidebar.title("Navigation\n____")
 page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Community Forum", "Chatbot", "Health Buddy", "Become a Buddy"])
 

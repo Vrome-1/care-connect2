@@ -13,7 +13,8 @@ def buddy():
   Buddies = {'Cancer': ['Alice', 'Ben', 'Jaspreet', 'Donald', 'June'] , 'Depression': ['Bernard', 'Andrew', 'Melaina', 'Carl'], 'Diabetes': ['Delian', 'Sally'], 'Eating Disorder': ['Dennis', 'Julia']}
   st.title("Find a Health Buddy")
   st.write("Please input your name and health concern you would like to connect with a buddy over.")
-  st.session_state.name = st.text_input("Your Name", value=st.session_state.name)
+  name = st.text_input("Your Name")
+  email = st.text_input("example@email.com")
   health_options = ['Cancer', 'Depression', 'Diabetes', 'Eating Disorder']
   st.session_state.selected_value = st.selectbox('Select a health concern:', health_options)
   submit_clicked = st.button("Submit")

@@ -9,7 +9,7 @@ def forum():
             {'name': 'Elaine G', 'title': 'Daily Update', 'content': "Good day all. As usual, my daily update. My doctor changed my meds, and now I feel nauseous all the time. Guess it's better than the other ones though because they affect my mood less. I'm really addicted to Words With Friends right now, effectively gets my mind off everything. Anyone want to play with me sometime?"}
         ]
 
-    st.title('Our Care Community Forum :heart:')
+    st.header('Our Care Community Forum :heart:')
     st.subheader("Today's Posts")
 
     # Displaying user stories

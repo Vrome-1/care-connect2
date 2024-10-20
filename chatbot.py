@@ -5,7 +5,7 @@ import os
 import openai
 # Set your OpenAI API key from environment variable
 def chatbot():
-    openai.api_key = os.getenv("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")
+    openai.api_key = "sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"
     # Initialize chat history in session state
     if "messages" not in st.session_state:
         st.session_state.messages = []

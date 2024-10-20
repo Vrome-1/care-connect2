@@ -20,7 +20,7 @@ def chatbot():
          # Initialize chat history
         if "messages" not in st.session_state:
             st.session_state.messages = []
-            st.session_state["openai_model"] = "gpt-4"
+            st.session_state["openai_model"] = "gpt-3.5-turbo"
 
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):

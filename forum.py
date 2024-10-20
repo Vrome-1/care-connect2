@@ -1,11 +1,11 @@
 import streamlit as st
-st.set_page_config(page_title="Care Connect", page_icon="❤️")
+st.set_page_config(page_title="Connect Care", page_icon="❤️")
 # Function to display the community forum
 def forum():
     # Initialize user stories in session state if not already done
     if 'user_stories' not in st.session_state:
         st.session_state.user_stories = [
-            {'name': 'Preeti Patel', 'title': 'My Journey', 'content': "Hi guys, I'm a new Care Connect user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer. Every day, I feel guilty that my husband has to work harder and harder as I get weaker. I just want to be strong again."},
+            {'name': 'Preeti Patel', 'title': 'My Journey', 'content': "Hi guys, I'm a new Connect Care user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer. Every day, I feel guilty that my husband has to work harder and harder as I get weaker. I just want to be strong again."},
             {'name': 'Elaine G', 'title': 'Daily Update', 'content': "Good day all. As usual, my daily update. My doctor changed my meds, and now I feel nauseous all the time. Guess it's better than the other ones though because they affect my mood less. I'm really addicted to Words With Friends right now, effectively gets my mind off everything. Anyone want to play with me sometime?"}
         ]
 

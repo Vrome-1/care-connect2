@@ -48,7 +48,7 @@ page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Com
 
 if page == "About":
     st.header("About Connect Care");
-    st.markdown("<p style='font-size:20px;'>Welcome to Care Connect! This website is all about support and community - we aim to help patients find and connect with others who understand what they are going through. Connect Care aims to connect patients to their community so that they can find others who understand what they are going through and help them.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:20px;'>Welcome to Connect Care! This website is all about support and community - we aim to help patients find and connect with others who understand what they are going through. Connect Care aims to connect patients to their community so that they can find others who understand what they are going through and help them.</p>", unsafe_allow_html=True)
     st.header("Inspiration");
     st.markdown("<p style='font-size:20px;'>We understand that, in healthcare, mental health is key. Patients go through a lot of stress related to their illnesses - both physical and emotional. As college students we have seen how our community can help us get through difficult times. We want patients to be able to feel like they are heard. By conencting with others they will be able to know that others understand their situation and be able to learn from others. We hope that Connect Care will allow patients to get in touch with a unique community that will continue to grow.</p>", unsafe_allow_html=True)
     st.header("Features")

@@ -1,7 +1,8 @@
 import streamlit as st
 import random
 import time
-import os
+import os 
+import openai
 from openai import OpenAI
 def chatbot():
         client = OpenAI (

@@ -35,7 +35,7 @@ def chatbot():
 
             # Generate a response using the OpenAI API
             response = openai.ChatCompletion.create(
-                model="gpt-4",
+                model="gpt-4o",
                 messages=[
                     {"role": m["role"], "content": m["content"]}
                     for m in st.session_state.messages

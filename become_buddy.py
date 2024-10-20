@@ -17,8 +17,15 @@ def become_buddy():
   st.radio("Select your availability:", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
   st.radio("Select your preferred meeting method: ", ['email', 'video call', 'in-person meeting', 'all of the above'])
   note = st.text_input("Please tell us if you have any other notes we need to keep in mind:")
+  st.subheader("Confidentiality Statement")
+  st.write("By participating in the health buddy program, I agree to uphold the following principles of confidentiality:")
+  st.markdown("1. Respect for Privacy: I understand that any personal information shared with me by my buddy is private and should be treated with respect. I will not disclose any details about their health condition, personal experiences, or any conversations we have without their explicit consent.")
+  st.markdown("2. Safe Environment: I will create a safe and supportive environment for my buddy, ensuring they feel comfortable sharing their thoughts and feelings.")
+  st.markdown("3. Limited Sharing: While I may share my own experiences, I will not share my buddy's story or information with anyone else, including friends, family, or social media, unless specifically authorized to do so.")
+  st.markdown("4. Commitment to Support: I commit to being a trustworthy companion, offering support and understanding without judgment.")
+  st.write("By agreeing to these principles, I recognize the importance of confidentiality in fostering a trusting and supportive relationship.")
   if st.checkbox("I agree to the confidentiality statement"):
-    st.write("This is to protect our patient's privacy.")
+    st.write("Select Submit.")
   else:
     st.write("Please agree to the confidentiality statement.")
   submit = st.button("Submit")

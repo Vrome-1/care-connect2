@@ -5,6 +5,7 @@ import os
 import openai
 # Set your OpenAI API key from environment variable
 def chatbot():
+        st.title("💬 Chatbot")
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column: 
@@ -25,6 +26,8 @@ def chatbot():
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
+
+        st.markdown("I am doing good! How are you?")
                         
 
 

@@ -40,15 +40,15 @@ def chatbot():
                     {"role": m["role"], "content": m["content"]}
                     for m in st.session_state.messages
                 ]
-            )
+         )
 
-            # Extract the assistant's message and store it in session state
-            assistant_message = response['choices'][0]['message']['content']
-            st.session_state.messages.append({"role": "assistant", "content": assistant_message})
+         # Extract the assistant's message and store it in session state
+         assistant_message = response['choices'][0]['message']['content']
+         st.session_state.messages.append({"role": "assistant", "content": assistant_message})
             
-            # Display the assistant's response
-            with st.chat_message("assistant"):
-                st.markdown(assistant_message)
+         # Display the assistant's response
+         with st.chat_message("assistant"):
+         st.markdown(assistant_message)
 
     
     # Ask user for their OpenAI API key

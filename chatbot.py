@@ -4,7 +4,8 @@ import time
 import os 
 import openai
 def chatbot():
-        openai.api_key = os.environ.get("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")
+        openai.api_key = st.secrets["sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"]
+        #openai.api_key = os.environ.get("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")
         '''client = OpenAI(
                 api_key = "sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"
         )'''
@@ -28,14 +29,16 @@ def chatbot():
                         
         if prompt := st.chat_input("Message your AI mentor!"):
                 # Display user message in chat message container
+                with st.chat_message("user"):
+                    st.markdown(prompt)
                 st.session_state.messages.append({"role": "user","content": prompt})
                 # Display chat messages from history on app rerun
                 # Display user message
-                with st.chat_message("user"):
-                    st.markdown(prompt)
         
-                try:
+        
+                with st.chat_message("assistant"):
                     # Call the OpenAI API to generate a response
+                    message_placeholder = st.empty()
                     completion = client.chat.completions.create(
                         model=st.session_state["openai_model"],
                         messages=[

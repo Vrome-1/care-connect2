@@ -75,11 +75,6 @@ elif page == "Educational Resources":
         # Check if the user clicked on "Find a health buddy"
         if st.session_state.get("go_to_buddy"):
             buddy()
-            st.session_state.go_to_buddy = False  # Reset the state
-        
-        # When the user clicks the link, set the session state
-        if st.button("Find a health buddy"):
-            st.session_state.go_to_buddy = True
     with col2:
         st.header("Websites")
         st.markdown("- https://www.ncoa.org/adviser/medical-alert-systems/support-for-older-adults-living-alone/")

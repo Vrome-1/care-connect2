@@ -1,8 +1,8 @@
 import streamlit as st
 import random
 import time
-from openai import OpenAI
 import os
+from openai import OpenAI
 def chatbot():
         client = OpenAI (
                 api_key = os.environ.get("sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA")

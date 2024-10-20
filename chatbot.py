@@ -34,7 +34,7 @@ def chatbot():
                 st.markdown(prompt)
 
             # Generate a response using the OpenAI API
-            response = openai.ChatCompletion.create(
+            response = openai.chat.completions.create(
                 model="gpt-4o",
                 messages=[
                     {"role": m["role"], "content": m["content"]}

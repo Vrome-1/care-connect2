@@ -9,4 +9,10 @@ become_buddy() :
   st.markdown("- Join a community")
   st.markdown("- Make an impact and help others in need")
   st.write("Ready to take the first step? Sign up today and be a guiding light for someone in need! Together, we can create a supportive network where everyone feels valued and empowered. Join us and be part of something special!")
-  
+  name = st.text_input("Your Name:")
+  email = st.text_input("Your Email:")
+  health = st.text_input("Your Health Concern:")
+  story = st.text_input("Your Story (please include your age and your journey with your health concern, share as much as you are comfortable with):")
+  submit = st.button("Submit")
+  if submit:
+    st.write("Thank you for submitting your application to me a health buddy! We will review it soon and let you know the next steps in the process!")

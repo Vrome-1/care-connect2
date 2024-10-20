@@ -21,9 +21,12 @@ st.markdown(
 st.markdown(
     """
     <style>
-    /* Increase the font size of sidebar radio buttons */
-    .css-1d391kg {  /* This class targets the sidebar radio button text */
+    /* Increase the font size of sidebar items */
+    .st-sidebar .stRadio label {  
         font-size: 40px;  /* Change this value for desired font size */
+    }
+    .stSidebar {  /* Increase font size for sidebar header */
+        font-size: 40px; /* Change this value for desired font size */
     }
     </style>
     """,

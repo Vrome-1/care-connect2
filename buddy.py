@@ -3,18 +3,18 @@ import streamlit as st
 # Function to connect people to buddies
 def buddy():
   Buddies = {'Cancer': ['Alice', 'Ben', 'Jaspreet', 'Donald', 'June'] , 'Depression': ['Bernard', 'Andrew', 'Melaina', 'Carl'], 'Diabetes': ['Delian', 'Sally'], 'Eating Disorder': ['Dennis', 'Julia']}
-  st.session_state.title("Find a Health Buddy")
-  st.session_state.write("Please input your name and health concern you would like to connect with a buddy over.")
-  name = st.text_input("Your Name")
+  st.title("Find a Health Buddy")
+  st.write("Please input your name and health concern you would like to connect with a buddy over.")
+  name = st.session_state.text_input("Your Name")
   health_options = ['Cancer', 'Depression', 'Diabetes', 'Eating Disorder']
-  selected_value = st.selectbox('Select a health concern:', health_options)
+  selected_value = st.session_state.selectbox('Select a health concern:', health_options)
   submit_clicked = st.button("Submit")
   if submit_clicked:
-    if name and selected_value:
+    if st.session_state.name and st.session_state.selected_value:
       st.write("Here are some people you can connect with: ")
       for key, value in Buddies.items():
-        if (key == selected_value): 
-          buddies_list = Buddies[selected_value]
+        if (key == st.session_state.selected_value): 
+          buddies_list = Buddies[st.session_state.selected_value]
           for person in buddies_list:
             st.markdown(
                 f"""

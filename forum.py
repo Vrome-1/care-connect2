@@ -36,14 +36,14 @@ def forum():
     
 
     if st.session_state.user_stories:
-    for story in st.session_state.user_stories:
-        st.markdown(f"""
-        <div style="background-color:rgba(255, 105, 180, 0.2); padding:10px; border-radius:5px; color:black; margin-bottom:20px;">
-            <p style="font-size:24px; font-weight:bold; margin:0;">{story['name']}</p>
-            <p style="font-size:20px; margin:0;">{story['title']}</p>
-            <p style="margin-top:5px;">{story['content']}</p>
-        </div>
-        """, unsafe_allow_html=True)
+        for story in st.session_state.user_stories:
+            st.markdown(f"""
+            <div style="background-color:rgba(255, 105, 180, 0.2); padding:10px; border-radius:5px; color:black; margin-bottom:20px;">
+                <p style="font-size:24px; font-weight:bold; margin:0;">{story['name']}</p>
+                <p style="font-size:20px; margin:0;">{story['title']}</p>
+                <p style="margin-top:5px;">{story['content']}</p>
+            </div>
+            """, unsafe_allow_html=True)
 
     st.subheader("Share Your Story")
     name = st.text_input("Your Name")

@@ -4,7 +4,7 @@ import os
 import json
 
 def chatbot():
-         st.title("💬 Chatbot")
+        st.title("💬 Chatbot")
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column: 

@@ -69,12 +69,8 @@ elif page == "Educational Resources":
     with col1:
         st.header("People")
         st.markdown("- Local doctor")
-        st.markdown("- [Find a health buddy](#)", unsafe_allow_html=True)  # Markdown link
+        st.markdown("- Find a health buddy")
         st.markdown("- Attend a local support group")
-        
-        # Check if the user clicked on "Find a health buddy"
-        if st.get("go_to_buddy"):
-            buddy()
     with col2:
         st.header("Websites")
         st.markdown("- https://www.ncoa.org/adviser/medical-alert-systems/support-for-older-adults-living-alone/")

@@ -47,6 +47,6 @@ def buddy():
                 unsafe_allow_html=True
             )
   st.session_state.people_options = st.selectbox('Select a person to connect with:', st.session_state.buddies_list)
-  connect = st.button("Connect!")
-  if connect:
+  connect_clicked = st.button("Connect!")
+  if connect_clicked:
       st.write("We sent an email requesting your connection. You will be connected with your buddy soon!")

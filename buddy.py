@@ -14,12 +14,12 @@ def buddy():
       'Diabetes': ['Delian', 'Sally'],
       'Eating Disorder': ['Dennis', 'Julia']
   }
-    Buddies = {
+  Buddies = {
         'Cancer': ['Alice', 'Ben', 'Jaspreet', 'Donald', 'June'],
         'Depression': ['Bernard', 'Andrew', 'Melaina', 'Carl'],
         'Diabetes': ['Delian', 'Sally'],
         'Eating Disorder': ['Dennis', 'Julia']
-    }
+  }
   
   st.title("Find a Health Buddy")
   st.write("Please input your name and health concern you would like to connect with a buddy over.")

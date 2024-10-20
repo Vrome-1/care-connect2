@@ -69,8 +69,8 @@ elif page == "Educational Resources":
     with col1:
         st.header("People")
         st.markdown("- local doctor")
-        url = "https://care-connect-success.streamlit.app/#find-a-health-buddy"
-        st.markdown(f"[- find a health budy]({url})")
+        if st.button("Find a health buddy"):
+            buddy()
         st.markdown("- attend a local support group")
     with col2:
         st.header("Websites")

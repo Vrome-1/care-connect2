@@ -68,10 +68,18 @@ elif page == "Educational Resources":
     col1, col2 = st.columns(2)
     with col1:
         st.header("People")
-        st.markdown("- local doctor")
-        if st.button("Find a health buddy"):
+        st.markdown("- Local doctor")
+        st.markdown("- [Find a health buddy](#)", unsafe_allow_html=True)  # Markdown link
+        st.markdown("- Attend a local support group")
+        
+        # Check if the user clicked on "Find a health buddy"
+        if st.session_state.get("go_to_buddy"):
             buddy()
-        st.markdown("- attend a local support group")
+            st.session_state.go_to_buddy = False  # Reset the state
+        
+        # When the user clicks the link, set the session state
+        if st.button("Find a health buddy"):
+            st.session_state.go_to_buddy = True
     with col2:
         st.header("Websites")
         st.markdown("- https://www.ncoa.org/adviser/medical-alert-systems/support-for-older-adults-living-alone/")

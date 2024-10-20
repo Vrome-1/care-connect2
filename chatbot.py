@@ -32,8 +32,8 @@ def chatbot():
         
                 try:
                     # Call the OpenAI API to generate a response
-                    completion = openai.ChatCompletion.create(
-                        model="gpt-3.5-turbo",
+                    completion = openai.chat.completions.create(
+                        model="gpt-4",
                         messages=[
                             {"role": "system", "content": "You are a helpful assistant"},
                             {"role": "user", "content": prompt}

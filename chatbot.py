@@ -4,7 +4,7 @@ import time
 import openai
 import os
 def chatbot():
-        openai.api_key = os.getenv("sk-ui5FCUjjTHQcMLwed-oov3hx-PbqsgQJ1X5HOCgf2ST3BlbkFJvN5KFsMLdydZwf60hQdTR61qc-xTxdB-0oVojAjyQA")
+        openai.api_key = os.getenv(MY_API_KEY)
         message = st.chat_message("User")
         left_column, right_column = st.columns([3,1])
         with left_column:

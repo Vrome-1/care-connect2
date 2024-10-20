@@ -26,5 +26,5 @@ def chatbot():
         for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
                         st.markdown(message["content"])
-                st.write("I am doing good! How are you?")
+                st.text_input("I am doing good! How are you?")
 

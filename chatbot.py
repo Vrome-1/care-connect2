@@ -5,40 +5,67 @@ import os
 import openai
 # Set your OpenAI API key from environment variable
 def chatbot():
-    openai.api_key = "sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA"
-    # Initialize chat history in session state
+    st.title("AI Health Mentor")
+    st.markdown("Chat with our AI mentor for support and guidance. Your conversations are private and confidential.")
+
+    # Initialize OpenAI client with API key from environment variable
+    api_key =  'sk-W2J7u45G4vDH9G90Ab4F88a0OA2gBJvfzjn2qlNftjT3BlbkFJKBEKXSe9UhEYAAjXBtf1AaNbPbNKfih1A088hFrWIA'
+
+    if not api_key:
+        st.error("OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
+        return
+
+    try:
+        client = OpenAI(api_key=api_key)
+    except Exception as e:
+        st.error(f"Error initializing OpenAI client: {str(e)}")
+        return
+
+    # Initialize chat history
     if "messages" not in st.session_state:
         st.session_state.messages = []
-        st.session_state["openai_model"] = "gpt-3.5-turbo"
+        # Add system message to set the AI's role
+        st.session_state.messages.append({
+            "role": "system",
+            "content": "You are a compassionate health mentor who provides emotional support and guidance to patients. Focus on being empathetic and encouraging while maintaining appropriate boundaries. Do not provide medical advice."
+        })
 
     # Display chat history
     for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+        if message["role"] != "system":  # Don't display system messages
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
 
-    # Input prompt from user
-    if prompt := st.chat_input("Message your AI mentor!"):
+    # Chat input
+    if prompt := st.chat_input("Type your message here..."):
+        # Add user message to chat
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
-            st.write(prompt)
+            st.markdown(prompt)
 
         try:
-            # Call the OpenAI API
-            completion = openai.ChatCompletion.create(
-                model=st.session_state["openai_model"],
-                messages=st.session_state.messages
-            )
-            ai_response = completion.choices[0].message['content']
+            # Get AI response
             with st.chat_message("assistant"):
-                st.markdown(ai_response)
+                message_placeholder = st.empty()
+                full_response = ""
+               
+                # Stream the response
+                for response in client.chat.completions.create(
+                    model="gpt-3.5-turbo",
+                    messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
+                    stream=True
+                ):
+                    if response.choices[0].delta.content is not None:
+                        full_response += response.choices[0].delta.content
+                        message_placeholder.markdown(full_response + "▌")
+               
+                message_placeholder.markdown(full_response)
+               
+            # Add assistant's response to chat history
+            st.session_state.messages.append({"role": "assistant", "content": full_response})
 
-            st.session_state.messages.append({"role": "assistant", "content": ai_response})
-
-        except openai.error.OpenAIError as e:
-            st.error(f"OpenAI API error: {e}")
         except Exception as e:
-            st.error(f"An unexpected error occurred: {e}")
-
+            st.error(f"Error generating response: {str(e)}")
                
         
 

@@ -43,12 +43,13 @@ elif page == "Educational Resources":
         st.header("People")
         st.markdown("- local doctor")
         st.markdown("- find a health buddy")
+        st.markdown("- attend a local support group")
     with col2:
         st.header("Websites")
         st.markdown("- https://www.ncoa.org/adviser/medical-alert-systems/support-for-older-adults-living-alone/")
         st.markdown("- https://www.cdc.gov/mental-health/about/?CDC_AAref_Val=https://www.cdc.gov/mentalhealth/learn/index.htm")
         st.markdown("- https://www.patientadvocate.org/")
-        st.markdown("- themighty.com")
+        st.markdown("- https://themighty.com")
         st.markdown("")
         
 elif page == "Chatbot":

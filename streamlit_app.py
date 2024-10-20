@@ -3,6 +3,7 @@ from openai import OpenAI
 from forum import forum
 from chatbot import chatbot
 from buddy import buddy
+from become_buddy import become_buddy
 st.set_page_config(
     page_title="Connect Care",
     page_icon="🤝",

@@ -14,7 +14,7 @@ def become_buddy():
   health = st.text_input("Your Health Condition:")
   story = st.text_input("Your Story (please include your age and your journey with your health concern, share as much as you are comfortable with):")
   goal = st.text_input("What is Your Goal for Being a Buddy?:")
-  st.radio("Select your availability:", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
+  st.checkbox("Select your availability:", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
   st.radio("Select your preferred meeting method: ", ['email', 'video call', 'in-person meeting', 'all of the above'])
   note = st.text_input("Please tell us if you have any other notes we need to keep in mind:")
   st.subheader("Confidentiality Statement")

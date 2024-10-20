@@ -3,8 +3,10 @@ import streamlit as st
 # Function to display the community forum
 def forum():
     # Initialize user stories in session state if not already done
-    if 'user_stories' not in st.session_state:
-        st.session_state.user_stories = []
+    st.session_state.user_stories = [
+    {'name': 'Preeti Patel', 'title': 'My Journey', 'content': "Hi guys, I'm a new Care Connect user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer."},
+    {'name': 'John Doe', 'title': 'Finding Support', 'content': "Hi Preeti, thank you for sharing your story. I’ve been dealing with something similar, and I know how hard it can be. It does get better, and you're stronger than you think."}
+]
 
     st.title('Our Care Community Forum :heart:')
     st.subheader("Today's Posts")
@@ -16,32 +18,32 @@ def forum():
     #     "I'm fortunate enough to have a very loving family, but even still I feel alone because they don't know what it's like to go through this. "
     #     "I also feel guilty for not being able to be as strong of a mom as I used to be. Does it ever get better?"
     # )
-    st.markdown("""
-    <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black; margin-bottom:20px;">
-    <p style="font-size:24px; font-weight:bold; margin:0;">Preeti Patel</p>
-    <p style="margin-top:5px;">
-        Hi guys, I'm a new Care Connect user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer. I'm fortunate enough to have a very loving family, but even still I feel alone because they don't know what it's like to go through this. I also feel guilty for not being able to be as strong of a mom as I used to be. Does it ever get better?
-    </p></div>""", unsafe_allow_html=True)
+    # st.markdown("""
+    # <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black; margin-bottom:20px;">
+    # <p style="font-size:24px; font-weight:bold; margin:0;">Preeti Patel</p>
+    # <p style="margin-top:5px;">
+    #     Hi guys, I'm a new Care Connect user and I wanted to share my story today. I've been struggling with my mental health for over a year now, just shortly after my diagnosis of breast cancer. I'm fortunate enough to have a very loving family, but even still I feel alone because they don't know what it's like to go through this. I also feel guilty for not being able to be as strong of a mom as I used to be. Does it ever get better?
+    # </p></div>""", unsafe_allow_html=True)
 
-    st.markdown("""
-    <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black; margin-bottom:20px;">
-    <p style="font-size:24px; font-weight:bold; margin:0;">Elaine G</p>
-    <p style="margin-top:5px;">
-        Good day all. As usual, my daily update. My doctor changed my meds, and now I feel nauseous all the time. "
-        "Guess it's better than the other ones though because they affect my mood less. I'm really addicted to Words With Friends right now, "
-        "effectively gets my mind off everything. Anyone want to play with me sometime?
-    </p></div>""", unsafe_allow_html=True)
+    # st.markdown("""
+    # <div style="background-color:rgba(240, 36, 121, 0.2); padding:10px; border-radius:5px; color: black; margin-bottom:20px;">
+    # <p style="font-size:24px; font-weight:bold; margin:0;">Elaine G</p>
+    # <p style="margin-top:5px;">
+    #     Good day all. As usual, my daily update. My doctor changed my meds, and now I feel nauseous all the time. "
+    #     "Guess it's better than the other ones though because they affect my mood less. I'm really addicted to Words With Friends right now, "
+    #     "effectively gets my mind off everything. Anyone want to play with me sometime?
+    # </p></div>""", unsafe_allow_html=True)
     
-    st.success(
-        "Elaine G.  \nGood day all. As usual, my daily update. My doctor changed my meds, and now I feel nauseous all the time. "
-        "Guess it's better than the other ones though because they affect my mood less. I'm really addicted to Words With Friends right now, "
-        "effectively gets my mind off everything. Anyone want to play with me sometime?"
-    )
 
-    # Display all user stories, including new submissions
     if st.session_state.user_stories:
-        for story in st.session_state.user_stories:
-            st.success(f"{story['name']}  \n{story['title']}  \n{story['content']}")  # Display in the same format
+    for story in st.session_state.user_stories:
+        st.markdown(f"""
+        <div style="background-color:rgba(255, 105, 180, 0.2); padding:10px; border-radius:5px; color:black; margin-bottom:20px;">
+            <p style="font-size:24px; font-weight:bold; margin:0;">{story['name']}</p>
+            <p style="font-size:20px; margin:0;">{story['title']}</p>
+            <p style="margin-top:5px;">{story['content']}</p>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.subheader("Share Your Story")
     name = st.text_input("Your Name")

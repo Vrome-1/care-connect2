@@ -25,15 +25,14 @@ page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Com
 if page == "About":
     st.header("About Connect Care");
     st.markdown("<p style='font-size:20px;'>Welcome to Care Connect! This website is all about support and community - we aim to help patients find and connect with others who understand what they are going through. Connect Care aims to connect patients to their community so that they can find others who understand what they are going through and help them.</p>", unsafe_allow_html=True)
-    #st.write("Welcome to Care Connect! This website is all about support and community - we aim to help patients find and connect with others who understand what they are going through. Connect Care aims to connect patients to their community so that they can find others who understand what they are going through and help them. ");
     st.header("Inspiration");
-    st.write("We understand that, in healthcare, mental health is key. Patients go through a lot of stress related to their illnesses - both physical and emotional. As college students we have seen how our community can help us get through difficult times. We want patients to be able to feel like they are heard. By conencting with others they will be able to know that others understand their situation and be able to learn from others. We hope that Connect Care will allow patients to get in touch with a unique community that will continue to grow.");
+    st.markdown("<p style='font-size:20px;'>We understand that, in healthcare, mental health is key. Patients go through a lot of stress related to their illnesses - both physical and emotional. As college students we have seen how our community can help us get through difficult times. We want patients to be able to feel like they are heard. By conencting with others they will be able to know that others understand their situation and be able to learn from others. We hope that Connect Care will allow patients to get in touch with a unique community that will continue to grow.</p>", unsafe_allow_html=True)
     st.header("Features")
-    st.write("We have included a variety of features to help patients with their healthcare: ")
+    st.markdown("<p style='font-size:20px;'>We have included a variety of features to help patients with their healthcare: </p>", unsafe_allow_html=True)
     st.subheader("1) The Community Health Forum");
-    st.write("This is a way for us to find people who are going through the same things as us. Here, patients can let all their feelings out and find others who can give them support and tips for managing their feelings. Users can post however frequently they want, and it can become a type of journal/blog for those who want to provide daily updates.");
+    st.markdown("<p style='font-size:20px;'>This is a way for us to find people who are going through the same things as us. Here, patients can let all their feelings out and find others who can give them support and tips for managing their feelings. Users can post however frequently they want, and it can become a type of journal/blog for those who want to provide daily updates.</p>", unsafe_allow_html=True)
     st.subheader("2) The Chatbot");
-    st.write("This is for people who just need to get their feelings out. The Chatbot can provide comforting reassurance, and advice. This is a good alternative to the community forum if users are too shy");
+    st.markdown("<p style='font-size:20px;'>This is for people who just need to get their feelings out. The Chatbot can provide comforting reassurance, and advice. This is a good alternative to the community forum if users are too shy</p>", unsafe_allow_html=True)
 elif page == "Community Forum":
     forum()
 elif page == "Educational Resources":

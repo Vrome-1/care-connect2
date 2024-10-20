@@ -18,7 +18,17 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+st.markdown(
+    """
+    <style>
+    /* Increase the font size of sidebar items */
+    .sidebar .sidebar-content {
+        font-size: 24px;  /* Change this value for desired font size */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.sidebar.title("Navigation\n____")
 page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Community Forum", "Chatbot", "Health Buddy"])
 

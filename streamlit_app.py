@@ -20,7 +20,7 @@ st.markdown(
 )
 
 st.sidebar.title("Navigation\n____")
-page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Community Forum", "Chatbot", "Health Buddy"])
+page = st.sidebar.radio("Choose a page", ["About", "Educational Resources", "Community Forum", "Chatbot", "Health Buddy", "Become a Buddy"])
 
 if page == "About":
     st.header("About Connect Care");
@@ -56,6 +56,8 @@ elif page == "Chatbot":
     chatbot()
 elif page == "Health Buddy":
     buddy()
+elif page == "Become a Buddy":
+    become_buddy()
 
 # # Show title and description.
 # st.title("💬 Chatbot")

@@ -28,7 +28,7 @@ st.markdown(
     
     /* Target all labels in the sidebar */
     .stSidebar label {
-        font-size: 40px; /* Adjust the font size */
+        font-size: 80px; /* Adjust the font size */
     }
     
     /* Increase the font size of sidebar title and other texts */

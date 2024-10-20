@@ -3,8 +3,6 @@ import streamlit as st
 # Function to connect people to buddies
 def buddy():
 
-  if 'name' not in st.session_state:
-        st.session_state.name = ""
   if 'selected_value' not in st.session_state:
         st.session_state.selected_value = None
   if 'buddies_list' not in st.session_state:

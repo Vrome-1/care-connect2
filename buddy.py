@@ -3,8 +3,8 @@ import streamlit as st
 # Function to connect people to buddies
 def buddy():
   Buddies = {'Cancer': ['Alice', 'Ben', 'Jaspreet', 'Donald', 'June'] , 'Depression': ['Bernard', 'Andrew', 'Melaina', 'Carl'], 'Diabetes': ['Delian', 'Sally'], 'Eating Disorder': ['Dennis', 'Julia']}
-  st.title("Find a Health Buddy")
-  st.write("Please input your name and health concern you would like to connect with a buddy over.")
+  st.session_state.title("Find a Health Buddy")
+  st.session_state.write("Please input your name and health concern you would like to connect with a buddy over.")
   name = st.text_input("Your Name")
   health_options = ['Cancer', 'Depression', 'Diabetes', 'Eating Disorder']
   selected_value = st.selectbox('Select a health concern:', health_options)
@@ -25,6 +25,6 @@ def buddy():
                 unsafe_allow_html=True
             )
       people_options = st.selectbox('Select a person to connect with:', Buddies[selected_value])
-      connect = st.session_state.button("Connect!")
+      connect = st.button("Connect!")
       if connect:
         st.write("We sent an email requesting your connection. You will be connected with your buddy soon!")

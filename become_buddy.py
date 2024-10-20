@@ -11,9 +11,16 @@ def become_buddy():
   st.write("Ready to take the first step? Sign up today and be a guiding light for someone in need! Together, we can create a supportive network where everyone feels valued and empowered. Join us and be part of something special!")
   name = st.text_input("Your Name:")
   email = st.text_input("Your Email:")
-  health = st.text_input("Your Health Concern:")
+  health = st.text_input("Your Health Condition:")
   story = st.text_input("Your Story (please include your age and your journey with your health concern, share as much as you are comfortable with):")
-  note = st.text_input("Please tell us if you have any special notes we need to keep in mind:")
+  goal = st.text_input("What is Your Goal for Being a Buddy?:")
+  st.radio("Select your availability:", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
+  st.radio("Select your preferred meeting method: ", ['email', 'video call', 'in-person meeting', 'all of the above'])
+  note = st.text_input("Please tell us if you have any other notes we need to keep in mind:")
+  if st.checkbox("I agree to the confidentiality statement"):
+    st.write("This is to protect our patient's privacy.")
+  else:
+    st.write("Please agree to the confidentiality statement.")
   submit = st.button("Submit")
   if submit:
     st.write("Thank you for submitting your application to me a health buddy! We will review it soon and let you know the next steps in the process!")
